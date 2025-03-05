@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import DashboardLayout from "../layout/DashboardLayout";
 import VisitorsList from "../dashboard/VisitorsList";
+import RealTimeVisitors from "../dashboard/RealTimeVisitors";
 import { Button } from "../ui/button";
 import { Filter } from "lucide-react";
 import { Popover, PopoverContent, PopoverTrigger } from "../ui/popover";
@@ -65,6 +66,9 @@ const VisitorsPage = () => {
             </Popover>
           </div>
         </div>
+
+        {/* Real-Time Visitors */}
+        <RealTimeVisitors />
 
         {/* Visitors List */}
         <VisitorsList onExport={handleExport} />

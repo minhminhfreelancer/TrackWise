@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import MetricsSummary from "./MetricsSummary";
 import WebsitesList from "./WebsitesList";
 import ComparisonCharts from "./ComparisonCharts";
+import RealTimeVisitors from "./RealTimeVisitors";
 import EmptyState from "./EmptyState";
 import { Button } from "../ui/button";
 import { PlusCircle, Filter } from "lucide-react";
@@ -97,6 +98,9 @@ const WebsiteOverview = ({
 
       {hasWebsites ? (
         <div className="space-y-6">
+          {/* Real-Time Visitors */}
+          <RealTimeVisitors />
+
           {/* Metrics Summary */}
           <MetricsSummary
             period={`Last ${timeframe.replace("days", " days").replace("months", " months")}`}

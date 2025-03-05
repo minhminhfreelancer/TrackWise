@@ -3,7 +3,14 @@ import { useNavigate, useSearchParams } from "react-router-dom";
 import DashboardLayout from "../layout/DashboardLayout";
 import AddWebsiteModal from "../website/AddWebsiteModal";
 import { Button } from "../ui/button";
-import { PlusCircle, Filter, Edit, Trash2, ExternalLink } from "lucide-react";
+import {
+  PlusCircle,
+  Filter,
+  Edit,
+  Trash2,
+  ExternalLink,
+  Globe,
+} from "lucide-react";
 import {
   Card,
   CardContent,
@@ -254,7 +261,20 @@ const WebsitesPage = () => {
           <div className="flex flex-col items-center justify-center w-full h-full min-h-[400px] p-8 bg-white rounded-lg border border-gray-200 shadow-sm">
             <div className="flex flex-col items-center text-center max-w-md">
               <div className="w-24 h-24 mb-6 text-gray-300">
-                <Globe className="w-full h-full" />
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  className="w-full h-full"
+                >
+                  <circle cx="12" cy="12" r="10" />
+                  <line x1="2" y1="12" x2="22" y2="12" />
+                  <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
+                </svg>
               </div>
 
               <h3 className="text-xl font-semibold text-gray-900 mb-2">

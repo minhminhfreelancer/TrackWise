@@ -66,7 +66,7 @@ const AddWebsiteModal = ({
 
   const handleSubmit = (values: z.infer<typeof formSchema>) => {
     // In a real app, this would send data to the backend and get a tracking code
-    onSubmit(values);
+    onSubmit(values as WebsiteFormValues);
 
     // Generate a mock tracking code
     const mockTrackingCode = `<!-- TrackWise Tracking Code for ${values.name} -->
